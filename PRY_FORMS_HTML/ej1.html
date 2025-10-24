@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Formulario
+    </title>
+</head>
+<body>
+    <header>
+        <h1>Ingresar datos del estudiante</h1>
+    </header>
+    <main>
+        <form action="./server.html" method="post">
+            <!--text-->
+            <!--maxlength, min length, required, disable-->
+            <label for="nombres">Ingrese sus nombres completos</label>
+            <input type="text" 
+            name="nombres" 
+            id="nombres" 
+            placeholder="Ingrese sus nombres completos"
+            autofocus
+            required
+            >
+            <label for="apellidos">Ingrese sus apellidos</label>
+            <input type="text" name="apellidos" 
+            id="apellidos" placeholder="Ingrese sus apellidos" 
+            required>
+            <!--email-->
+            <label for="email">Ingrese su correo</label>
+            <input type="email" name="email" id="email" 
+            placeholder="Ingrese su correo" required>
+            <!--number-->
+            <label for="edad">Ingrese su edad</label>
+            <input type="number" name="edad" 
+            id="edad" placeholder="Ingrese su edad" 
+            min="15" max="50"
+            value ="15" 
+            required>
+            <!--date-->
+            <label for="fecha_nacimiento">Ingrese su fecha de nacimiento</label>
+            <input type="date" name="fecha_nacimiento" 
+            id="fecha_nacimiento" value="2025-22-10" 
+            min="1975-01-01" max="2010-12-31" 
+            required>
+            <!--radio-->
+            <label for="hombre">Hombre</label>
+            <input type="radio" name="genero" id="hombre" value="hombre">
+            <label for="mujer">Mujer</label>
+            <input type="radio" name="genero" id="mujer"
+            value="mujer" checked>
+            <!--checkbox-->
+            <lable>seleccione dias de clases de pro web</lable>
+            <lable for="lunes">lunes</lable>
+            <input type="checkbox" name="dia[]" id="lunes" checked>
+            <lable for="martes">martes</lable>
+            <input type="checkbox" name="dia[]" id="martes" disabled>
+            <lable for="miercoles">miercoles</lable>
+            <input type="checkbox" name="dia[]" id="miercoles" checked>
+            <lable for="jueves">jueves</lable>
+            <input type="checkbox" name="dia[]" id="jueves" disabled>
+            <lable for="viernes">viernes</lable>
+            <input type="checkbox" name="dia[]" id="viernes" checked>
+
+            <!--file-->
+            <lable for="foto">cargue su foto de perfil</lable>
+            <input type="file" name="foto" id="foto" acccept=".png .jpg">
+
+            <!--color-->
+            <label for="color_favorito">Seleccione su color favorito</label>
+            <input type="color" name="color_favorito" id="color_favorito" value="#0000ff">
+
+            <!--range-->
+            <lable for="estatura">estatura</lable>
+            <input type="range" name="estatura" id="estatura" min="1" max="2" step="0.01" value="1.50">
+
+            <!--password-->
+            <label for="contrasenia">Ingrese su contraseña</label>
+            <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña" required>
+
+            <!--search-->
+            <label for="cedula">Buscar por id</label>
+            <input type="search" name="cedula" id="cedula" placeholder="Ingrese su cédula">
+
+            <!--reset-->
+            <input type="reset" name="limpiar" id="limpiar" value="Limpiar formulario">
+
+            <!--submit-->
+            <input type="submit" name="enviar" id="enviar" value="Enviar formulario">
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
