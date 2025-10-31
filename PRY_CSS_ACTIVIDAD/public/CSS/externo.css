@@ -1,0 +1,27 @@
+h1{
+    color: #ff69b4;
+    text-align: center;
+}
+body{
+    background-color: powderblue;
+}
+#nombres{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: darkblue;
+    color: white;
+}
+#comentarios{
+    field-sizing: content;
+    resize: none;
+    background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+}
+#productos{
+    text-shadow: 2px 1px 1px gray;
+    border-radius: 12px;
+}
+input[type="checkbox"]{
+    outline: 3px solid pink;
+}
+input[type="radio"]{
+    cursor: pointer;
+}

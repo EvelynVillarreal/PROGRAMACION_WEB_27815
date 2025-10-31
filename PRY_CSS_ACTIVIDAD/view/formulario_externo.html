@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        formulario con css externo
+    </title>
+    <link rel="stylesheet" href="../public/CSS/externo.css">
+</head>
+<body>
+    <header>
+        <h1>
+            css externo
+        </h1>
+    </header>
+    <main>
+        <form action="server.html" method="get">
+            <label for="nombres">Ingrese sus nombres completos</label>
+            <input type="text" name="nombres" id="nombres" placeholder="Evelyn">
+            <br><br>
+            <textarea name="comentarios" id="comentarios" rows="5" cols="50">Escribe un comentario</textarea>
+            <br><br>
+            <label for="productos">Seleccione los productos que desea comprar</label>
+            <select name="productos[]" id="productos" multiple size="5" required>
+                <option value="" disabled></option>
+                <option value="primer">primer</option>
+                <option value="base">base</option>
+                <option value="rubor">rubor</option>
+                <option value="sombras">sombras</option>
+                <option value="fix_spray">fix spray</option>
+            </select>
+            <br><br>
+            <lable>seleccione dias de clases de pro web</lable>
+            <lable for="lunes">lunes</lable>
+            <input type="checkbox" name="dia[]" id="lunes" checked>
+            <lable for="martes">martes</lable>
+            <input type="checkbox" name="dia[]" id="martes" disabled>
+            <lable for="miercoles">miercoles</lable>
+            <input type="checkbox" name="dia[]" id="miercoles" checked>
+            <lable for="jueves">jueves</lable>
+            <input type="checkbox" name="dia[]" id="jueves" disabled>
+            <lable for="viernes">viernes</lable>
+            <input type="checkbox" name="dia[]" id="viernes" checked>
+
+            <br><br>
+            <lable>Seleccione su genero</lable>
+            <label for="hombre">Hombre</label>
+            <input type="radio" name="genero" id="hombre" value="hombre">
+            <label for="mujer">Mujer</label>
+            <input type="radio" name="genero" id="mujer"value="mujer" checked>
+            <label for="otro">Otro</label>
+            <input type="radio" name="genero" id="otro"value="otro">
+        </form>
+    </main>
+    <footer>
+        <p>Evelyn Villarreal</p>
+        <p>Hice uso de más css de lo pedido con el objetivo de entender su funcionamiento</p>
+    </footer>
+</body>
+</html>
