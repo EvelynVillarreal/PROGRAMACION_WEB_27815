@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>
+            Encuesta Parque Tecnológico
+        </title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="public/vendor/template/css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">Evelyn Villarreal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#!">Sample Post</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#!">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('public/vendor/template/assets/img/tecnologia.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Encuesta de satisfacción</h1>
+                            <span class="subheading">Haznos saber en qué debemos mejorar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    <form action="./server.html" method="get">
+                        <h2 class="post-title">Datos personales</h3>
+                        <label for="nombres">Ingrese su nombre completo</label><br>
+                        <input type="text" id="nombres" name="nombres" required maxlength="100" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" value="Evelyn Villarreal" placeholder="Ingrese su nombre">
+                        <hr class="my-4">
+                        <label for="email">Ingrese su correo electrónico</label><br>
+                        <input type="email" id="email" name="email" required value="ehvillarreal@espe.edu.ec" placeholder="Ingrese su correo electrónico"><br>
+                        <label for="edad">Ingrese su edad</label><br>
+                        <input type="number" id="edad" name="edad" required min="10" max="100" value="20" placeholder="Ingrese su edad"><br>
+                        <hr class="my-4">
+                        <label for="genero">Seleccione su genero</label><br>
+                        <label for="hombre">Home</label>
+                        <input type="radio" id="hombre" name="genero" value="hombre">
+                        <label for="mujer">Mujer</label>
+                        <input type="radio" id="mujer" name="genero" value="mujer" checked>
+                        <label for="otro">Otro</label>
+                        <input type="radio" id="otro" name="genero" value="otro">
+
+                        <hr class="my-4">
+                        <h2 class="post-title">Fecha</h2>
+                        <label for="fecha">Ingrese la fehca en que visito el parque</label><br>
+                        <input type="date" id="fecha" name="fecha" required value="2025-11-12">
+                        <label for="hora">Hora de visita</label><br>
+                        <input type="time" id="hora" name="hora" required="required" value="10:30">
+                        <hr class="my-4">
+
+                        <h2 class="post-title">Satisfacción y sugerencias</h2>
+                        <label for="satisfaccion">¿Qué tan satisfecho está con las instalaciones del parque tecnológico?</label><br>
+                        <input type="range" id="satisfaccion" name="satisfaccion" min="1" max="10" step="1" value="10" required ><br>
+                        <h3 class="post-subtitle">¿Qué te gustó más?</h3>
+                        <label for="tecnologia">Tecnología</label>
+                        <input type="checkbox" id="tecnologia" name="gusto" checked><br>
+                        <label for="naturaleza">Naturaleza</label>
+                        <input type="checkbox" id="naturaleza" name="gusto" checked><br>
+                        <label for="actividades">Actividades</label>
+                        <input type="checkbox" id="actividades" name="gusto" checked><br>
+                        <label for="comida">Comida</label>
+                        <input type="checkbox" id="comida" name="gusto" checked><br>
+
+                        <label for="recomendar">¿Recomendarías este parque?</label>
+                        <input type="radio" id="si" name="recomendar" required checked><br>
+
+                        <label for="comentario">Dejanos tus sugerencias o comentarios</label>
+                        <textarea name="comentario" id="comentario" placeholder="Escribe tu opinión..." maxlength="200"></textarea>
+                        <hr class="my-4">
+                        <input type="submit" name="enviar" id="enviar" value="Enviar formulario">
+                        <input type="reset" name="limpiar" id="limpiar" value="Limpiar formulario">
+                        <aside>
+            <figure>
+                <img src="public/vendor/template/assets/img/tecnologia.jpg" alt="..">
+                <figcaption>La Tecnología es parte de nuestra vida</figcaption>
+            </figure>
+        </aside>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://www.tiktok.com/@dragonpaws_">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-tiktok fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/profile.php?id=100009607207593">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/dragonpaws_/">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Evelyn Villarreal 2025</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="public/vendor/template/js/scripts.js"></script>
+    </body>
+</html>
