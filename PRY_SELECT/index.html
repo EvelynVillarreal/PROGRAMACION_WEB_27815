@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        formulario select
+    </title>
+</head>
+<body>
+    <header>
+        <hi>select en formularios</hi>
+    </header>
+    <main>
+        <form action="server.html" method="get">
+            <label for="id">ingrese su id ejm LID4525</label>
+            <input type="text" name="id" id="id" placeholder="ingrese su id" pattern="[A-Z]{3}{0-9}{4.}" required>
+            <!-- select en form -->
+             <label for="lista_frutas">lista de frutas</label>
+             <input type="hidden" value="1725131856" name="usuario_id">
+             <select name="lista_frutas" id="lista_frutas" required autofocus>
+                <option value=""></option>
+                <option value="naranja">naranja</option>
+                <option value="manzana">manzana</option>
+                <option value="pera">pera</option>
+                <option value="mango">mango</option>
+             </select>
+             <br><br>
+             <label for="canciones_fav">canciones_fav</label>
+             <select name="mis_canciones_fav[]" id="canciones_fav" multiple size="4" required>
+                <option value="" disabled></option>
+                <optgroup title="bvb" label="Black_Veil_Brides">
+                    <option value="rebel_lovesong">rebel love song</option>
+                    <option value="bleeders">bleeders</option>
+                </optgroup>
+                <optgroup title="pierce_the_veil" label="Pierce_The_Veil">
+                    <option value="bulls_in_the_bronx" selected>bulls in the bronx</option>
+                    <option value="king_for_a_day" selected>king for a day</option>
+                </optgroup>
+                <optgroup title="falling_in_reverse" label="Falling_In_Reverse">
+                    <option value="the_drug_in_me_is_you">the drug in me is you</option>
+                    <option value="popular_monster">popular monster</option>
+                </optgroup>
+             </select>
+             <br><br>
+             <!-- text area -->
+              <textarea name="descripcion" required id="descripcion" rows="5" cols="50">Escribe aquí tus comentarios...</textarea>
+            <!--input type="submit" value="enviar al server"-->
+            <br>
+            <button type="submit">Enviar al servidor</button>
+        </form>
+    </main>
+    <footer>
+        <p>
+            c 2025
+        </p>
+    </footer>
+</body>
+</html>
